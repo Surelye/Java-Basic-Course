@@ -1,0 +1,3 @@
+rootProject.name = 'gradle-student-service'
+include 'api', 'db', 'impl'
+

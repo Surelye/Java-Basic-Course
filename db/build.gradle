@@ -1,0 +1,15 @@
+buildscript {
+    dependencies {
+        classpath 'org.postgresql:postgresql:42.7.4'
+        classpath 'org.flywaydb:flyway-database-postgresql:11.3.1'
+    }
+}
+
+plugins {
+    id 'org.flywaydb.flyway' version '11.3.1'
+}
+
+dependencies {
+    implementation 'org.postgresql:postgresql:42.7.4'
+    implementation 'org.flywaydb:flyway-database-postgresql:11.3.1'
+}
