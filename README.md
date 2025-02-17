@@ -5,5 +5,5 @@
 
 Для переключения в нужную ветвь с решением необходимо выполнить в командной строке команду:
 ```bash
-git checkout -f <branch-name>
+git checkout <branch-name>
 ```
