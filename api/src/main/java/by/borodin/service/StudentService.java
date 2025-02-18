@@ -1,18 +1,18 @@
 package by.borodin.service;
 
-import by.borodin.model.Student;
+import by.borodin.dto.StudentDto;
 
 import java.util.List;
 
 public interface StudentService {
 
-    List<Student> getAll();
+    List<StudentDto> getAll();
 
-    Student getById(Long id);
+    StudentDto getById(Long id);
 
-    Student save(Student student);
+    StudentDto save(StudentDto student);
 
-    Student update(Student student);
+    StudentDto update(StudentDto student);
 
     void deleteById(Long id);
 }
