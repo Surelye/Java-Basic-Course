@@ -1,8 +1,9 @@
-package by.borodin.service;
+package by.borodin.service.impl;
 
 import by.borodin.dto.StudentDto;
 import by.borodin.mapper.StudentMapper;
 import by.borodin.repository.StudentRepository;
+import by.borodin.service.StudentService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
