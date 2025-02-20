@@ -1,0 +1,506 @@
+- Получите список всех запущенных процессов
+$ ps -A
+    PID TTY          TIME CMD
+      1 ?        00:00:01 systemd
+      2 ?        00:00:00 kthreadd
+      3 ?        00:00:00 rcu_gp
+      4 ?        00:00:00 rcu_par_gp
+      5 ?        00:00:00 slub_flushwq
+      6 ?        00:00:00 netns
+     10 ?        00:00:00 mm_percpu_wq
+     11 ?        00:00:00 rcu_tasks_kthread
+     12 ?        00:00:00 rcu_tasks_rude_kthread
+     13 ?        00:00:00 rcu_tasks_trace_kthread
+     14 ?        00:00:01 ksoftirqd/0
+     15 ?        00:00:08 rcu_preempt
+     16 ?        00:00:00 migration/0
+     18 ?        00:00:00 cpuhp/0
+     19 ?        00:00:00 cpuhp/1
+     20 ?        00:00:01 migration/1
+     21 ?        00:00:06 ksoftirqd/1
+     23 ?        00:00:00 kworker/1:0H-events_highpri
+     26 ?        00:00:00 kdevtmpfs
+     27 ?        00:00:00 inet_frag_wq
+     28 ?        00:00:00 kauditd
+     29 ?        00:00:00 khungtaskd
+     31 ?        00:00:00 oom_reaper
+     32 ?        00:00:00 writeback
+     33 ?        00:00:01 kcompactd0
+     34 ?        00:00:00 ksmd
+     36 ?        00:00:02 khugepaged
+     37 ?        00:00:00 kintegrityd
+     38 ?        00:00:00 kblockd
+     39 ?        00:00:00 blkcg_punt_bio
+     40 ?        00:00:00 tpm_dev_wq
+     41 ?        00:00:00 edac-poller
+     42 ?        00:00:00 devfreq_wq
+     43 ?        00:00:01 kworker/1:1H-kblockd
+     44 ?        00:00:00 kswapd0
+     51 ?        00:00:00 kthrotld
+     53 ?        00:00:00 acpi_thermal_pm
+     54 ?        00:00:00 xenbus_probe
+     55 ?        00:00:00 mld
+     56 ?        00:00:00 kworker/0:1H-kblockd
+     57 ?        00:00:00 ipv6_addrconf
+     62 ?        00:00:00 kstrp
+     67 ?        00:00:00 zswap-shrink
+     68 ?        00:00:00 kworker/u5:0
+    145 ?        00:00:00 ata_sff
+    147 ?        00:00:00 scsi_eh_0
+    148 ?        00:00:00 scsi_tmf_0
+    149 ?        00:00:00 scsi_eh_1
+    150 ?        00:00:00 scsi_tmf_1
+    151 ?        00:00:00 scsi_eh_2
+    152 ?        00:00:00 scsi_tmf_2
+    154 ?        00:00:00 irq/18-vmwgfx
+    155 ?        00:00:00 card0-crtc0
+    156 ?        00:00:00 card0-crtc1
+    157 ?        00:00:00 card0-crtc2
+    158 ?        00:00:00 card0-crtc3
+    159 ?        00:00:00 card0-crtc4
+    160 ?        00:00:00 card0-crtc5
+    161 ?        00:00:00 card0-crtc6
+    162 ?        00:00:00 card0-crtc7
+    170 ?        00:00:00 kworker/0:2H-kblockd
+    217 ?        00:00:00 jbd2/sda1-8
+    218 ?        00:00:00 ext4-rsv-conver
+    272 ?        00:00:00 systemd-journal
+    297 ?        00:00:00 systemd-udevd
+    301 ?        00:00:00 haveged
+    392 ?        00:00:02 dbus-daemon
+    394 ?        00:00:00 polkitd
+    395 ?        00:00:00 systemd-logind
+    400 ?        00:00:00 rpciod
+    401 ?        00:00:00 xprtiod
+    410 ?        00:00:00 cron
+    412 ?        00:00:00 NetworkManager
+    422 ?        00:00:00 ModemManager
+    446 ?        00:00:00 lightdm
+    463 ?        00:00:04 VBoxService
+    476 tty7     00:02:43 Xorg
+    477 tty1     00:00:00 agetty
+    528 ?        00:00:00 rtkit-daemon
+    618 ?        00:00:00 lightdm
+    623 ?        00:00:00 systemd
+    624 ?        00:00:00 (sd-pam)
+    639 ?        00:00:00 pulseaudio
+    641 ?        00:00:00 gnome-keyring-d
+    647 ?        00:00:03 dbus-daemon
+    649 ?        00:00:01 xfce4-session
+    714 ?        00:00:00 VBoxClient
+    715 ?        00:00:00 VBoxClient
+    729 ?        00:00:00 VBoxClient
+    730 ?        00:00:11 VBoxClient
+    737 ?        00:00:00 VBoxClient
+    738 ?        00:00:17 VBoxClient
+    752 ?        00:00:00 ssh-agent
+    757 ?        00:00:00 VBoxClient
+    758 ?        00:00:02 VBoxClient
+    770 ?        00:00:00 at-spi-bus-laun
+    776 ?        00:00:00 dbus-daemon
+    785 ?        00:00:01 at-spi2-registr
+    796 ?        00:00:00 gpg-agent
+    798 ?        00:00:42 xfwm4
+    801 ?        00:00:00 gvfsd
+    806 ?        00:00:00 gvfsd-fuse
+    825 ?        00:00:01 xfsettingsd
+    828 ?        00:00:00 upowerd
+    836 ?        00:00:02 xfce4-panel
+    840 ?        00:00:00 Thunar
+    845 ?        00:00:03 xfdesktop
+    846 ?        00:00:01 panel-1-whisker
+    851 ?        00:00:53 panel-13-cpugra
+    852 ?        00:00:00 panel-14-systra
+    853 ?        00:00:26 panel-15-genmon
+    854 ?        00:00:12 panel-16-pulsea
+    855 ?        00:00:00 panel-17-notifi
+    856 ?        00:00:00 panel-18-power-
+    857 ?        00:00:00 panel-22-action
+    893 ?        00:00:00 xfce4-power-man
+    907 ?        00:00:00 xfce4-notifyd
+    920 ?        00:00:00 agent
+    926 ?        00:00:00 xiccd
+    942 ?        00:00:00 dconf-service
+    943 ?        00:00:00 polkit-gnome-au
+    949 ?        00:00:00 nm-applet
+    965 ?        00:00:00 gvfs-udisks2-vo
+    968 ?        00:00:00 colord
+    973 ?        00:00:01 blueman-applet
+    980 ?        00:00:00 udisksd
+    982 ?        00:00:00 light-locker
+   1007 ?        00:00:01 xcape
+   1082 ?        00:00:00 gvfs-gphoto2-vo
+   1092 ?        00:00:00 gvfs-goa-volume
+   1099 ?        00:00:05 qterminal
+   1100 ?        00:00:00 gvfs-afc-volume
+   1113 ?        00:00:00 gvfs-mtp-volume
+   1159 ?        00:00:00 gvfsd-trash
+   1170 ?        00:00:00 gvfsd-metadata
+   1233 ?        00:00:25 qterminal
+   1242 pts/0    00:00:06 zsh
+   1245 pts/1    00:00:07 zsh
+   1270 ?        00:00:00 obexd
+   3818 ?        00:00:01 kworker/u4:1-events_unbound
+   7570 ?        00:00:00 xdg-desktop-por
+   7574 ?        00:00:00 xdg-document-po
+   7577 ?        00:00:00 xdg-permission-
+   7583 ?        00:00:00 fusermount3
+   7586 ?        00:00:00 xdg-desktop-por
+   7932 ?        00:00:00 kworker/1:2-events
+   8459 ?        00:00:14 kworker/1:3-events
+  16345 ?        00:00:01 kworker/u4:0-flush-8:0
+  21100 ?        00:00:00 kworker/u4:3-flush-8:0
+  21607 ?        00:00:01 kworker/0:1-events_freezable_power_
+  26641 ?        00:00:00 kworker/0:2-events
+  29024 ?        00:00:00 kworker/u4:2-events_unbound
+  29186 ?        00:00:00 kworker/0:0-ata_sff
+  29472 pts/1    00:00:00 script
+  29473 pts/2    00:00:00 zsh
+  29497 pts/2    00:00:00 sh
+  29554 pts/2    00:00:00 ps
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+- Получите список всех запущенных процессов с использованием процессора и памяти
+$ ps aux
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  0.3 167720 12244 ?        Ss   09:58   0:01 /sbin/init splash
+root           2  0.0  0.0      0     0 ?        S    09:58   0:00 [kthreadd]
+root           3  0.0  0.0      0     0 ?        I<   09:58   0:00 [rcu_gp]
+root           4  0.0  0.0      0     0 ?        I<   09:58   0:00 [rcu_par_gp]
+root           5  0.0  0.0      0     0 ?        I<   09:58   0:00 [slub_flushwq]
+root           6  0.0  0.0      0     0 ?        I<   09:58   0:00 [netns]
+root          10  0.0  0.0      0     0 ?        I<   09:58   0:00 [mm_percpu_wq]
+root          11  0.0  0.0      0     0 ?        I    09:58   0:00 [rcu_tasks_kthread]
+root          12  0.0  0.0      0     0 ?        I    09:58   0:00 [rcu_tasks_rude_kthread]
+root          13  0.0  0.0      0     0 ?        I    09:58   0:00 [rcu_tasks_trace_kthread]
+root          14  0.0  0.0      0     0 ?        S    09:58   0:01 [ksoftirqd/0]
+root          15  0.2  0.0      0     0 ?        I    09:58   0:08 [rcu_preempt]
+root          16  0.0  0.0      0     0 ?        S    09:58   0:00 [migration/0]
+root          18  0.0  0.0      0     0 ?        S    09:58   0:00 [cpuhp/0]
+root          19  0.0  0.0      0     0 ?        S    09:58   0:00 [cpuhp/1]
+root          20  0.0  0.0      0     0 ?        S    09:58   0:01 [migration/1]
+root          21  0.1  0.0      0     0 ?        S    09:58   0:06 [ksoftirqd/1]
+root          23  0.0  0.0      0     0 ?        I<   09:58   0:00 [kworker/1:0H-events_highpri]
+root          26  0.0  0.0      0     0 ?        S    09:58   0:00 [kdevtmpfs]
+root          27  0.0  0.0      0     0 ?        I<   09:58   0:00 [inet_frag_wq]
+root          28  0.0  0.0      0     0 ?        S    09:58   0:00 [kauditd]
+root          29  0.0  0.0      0     0 ?        S    09:58   0:00 [khungtaskd]
+root          31  0.0  0.0      0     0 ?        S    09:58   0:00 [oom_reaper]
+root          32  0.0  0.0      0     0 ?        I<   09:58   0:00 [writeback]
+root          33  0.0  0.0      0     0 ?        S    09:58   0:01 [kcompactd0]
+root          34  0.0  0.0      0     0 ?        SN   09:58   0:00 [ksmd]
+root          36  0.0  0.0      0     0 ?        SN   09:58   0:02 [khugepaged]
+root          37  0.0  0.0      0     0 ?        I<   09:58   0:00 [kintegrityd]
+root          38  0.0  0.0      0     0 ?        I<   09:58   0:00 [kblockd]
+root          39  0.0  0.0      0     0 ?        I<   09:58   0:00 [blkcg_punt_bio]
+root          40  0.0  0.0      0     0 ?        I<   09:58   0:00 [tpm_dev_wq]
+root          41  0.0  0.0      0     0 ?        I<   09:58   0:00 [edac-poller]
+root          42  0.0  0.0      0     0 ?        I<   09:58   0:00 [devfreq_wq]
+root          43  0.0  0.0      0     0 ?        I<   09:58   0:01 [kworker/1:1H-kblockd]
+root          44  0.0  0.0      0     0 ?        S    09:58   0:00 [kswapd0]
+root          51  0.0  0.0      0     0 ?        I<   09:58   0:00 [kthrotld]
+root          53  0.0  0.0      0     0 ?        I<   09:58   0:00 [acpi_thermal_pm]
+root          54  0.0  0.0      0     0 ?        S    09:58   0:00 [xenbus_probe]
+root          55  0.0  0.0      0     0 ?        I<   09:58   0:00 [mld]
+root          56  0.0  0.0      0     0 ?        I<   09:58   0:00 [kworker/0:1H-kblockd]
+root          57  0.0  0.0      0     0 ?        I<   09:58   0:00 [ipv6_addrconf]
+root          62  0.0  0.0      0     0 ?        I<   09:58   0:00 [kstrp]
+root          67  0.0  0.0      0     0 ?        I<   09:58   0:00 [zswap-shrink]
+root          68  0.0  0.0      0     0 ?        I<   09:58   0:00 [kworker/u5:0]
+root         145  0.0  0.0      0     0 ?        I<   09:58   0:00 [ata_sff]
+root         147  0.0  0.0      0     0 ?        S    09:58   0:00 [scsi_eh_0]
+root         148  0.0  0.0      0     0 ?        I<   09:58   0:00 [scsi_tmf_0]
+root         149  0.0  0.0      0     0 ?        S    09:58   0:00 [scsi_eh_1]
+root         150  0.0  0.0      0     0 ?        I<   09:58   0:00 [scsi_tmf_1]
+root         151  0.0  0.0      0     0 ?        S    09:58   0:00 [scsi_eh_2]
+root         152  0.0  0.0      0     0 ?        I<   09:58   0:00 [scsi_tmf_2]
+root         154  0.0  0.0      0     0 ?        S    09:58   0:00 [irq/18-vmwgfx]
+root         155  0.0  0.0      0     0 ?        S    09:58   0:00 [card0-crtc0]
+root         156  0.0  0.0      0     0 ?        S    09:58   0:00 [card0-crtc1]
+root         157  0.0  0.0      0     0 ?        S    09:58   0:00 [card0-crtc2]
+root         158  0.0  0.0      0     0 ?        S    09:58   0:00 [card0-crtc3]
+root         159  0.0  0.0      0     0 ?        S    09:58   0:00 [card0-crtc4]
+root         160  0.0  0.0      0     0 ?        S    09:58   0:00 [card0-crtc5]
+root         161  0.0  0.0      0     0 ?        S    09:58   0:00 [card0-crtc6]
+root         162  0.0  0.0      0     0 ?        S    09:58   0:00 [card0-crtc7]
+root         170  0.0  0.0      0     0 ?        I<   09:58   0:00 [kworker/0:2H-kblockd]
+root         217  0.0  0.0      0     0 ?        S    09:58   0:00 [jbd2/sda1-8]
+root         218  0.0  0.0      0     0 ?        I<   09:58   0:00 [ext4-rsv-conver]
+root         272  0.0  0.4  49572 16260 ?        Ss   09:58   0:00 /lib/systemd/systemd-journald
+root         297  0.0  0.1  27076  7224 ?        Ss   09:58   0:00 /lib/systemd/systemd-udevd
+root         301  0.0  0.1   8260  5344 ?        Ss   09:58   0:00 /usr/sbin/haveged --Foreground --verbose=1
+message+     392  0.0  0.1  10044  5656 ?        Ss   09:58   0:02 /usr/bin/dbus-daemon --system --address=systemd: 
+polkitd      394  0.0  0.3 309992 12072 ?        Ssl  09:58   0:00 /usr/lib/polkit-1/polkitd --no-debug
+root         395  0.0  0.2  25288  8136 ?        Ss   09:58   0:00 /lib/systemd/systemd-logind
+root         400  0.0  0.0      0     0 ?        I<   09:58   0:00 [rpciod]
+root         401  0.0  0.0      0     0 ?        I<   09:58   0:00 [xprtiod]
+root         410  0.0  0.0   6608  2736 ?        Ss   09:58   0:00 /usr/sbin/cron -f
+root         412  0.0  0.5 258548 21764 ?        Ssl  09:58   0:00 /usr/sbin/NetworkManager --no-daemon
+root         422  0.0  0.3 317308 12168 ?        Ssl  09:58   0:00 /usr/sbin/ModemManager
+root         446  0.0  0.1 309008  7716 ?        SLsl 09:58   0:00 /usr/sbin/lightdm
+root         463  0.1  0.0 292888  3008 ?        Sl   09:58   0:04 /usr/sbin/VBoxService
+root         476  4.6  3.4 398876 139024 tty7    Ssl+ 09:58   2:43 /usr/lib/xorg/Xorg :0 -seat seat0 -auth /var/run/
+root         477  0.0  0.0   5872  1032 tty1     Ss+  09:58   0:00 /sbin/agetty -o -p -- \u --noclear - linux
+rtkit        528  0.0  0.0  22696  1496 ?        SNsl 09:58   0:00 /usr/libexec/rtkit-daemon
+root         618  0.0  0.2 162472  8056 ?        Sl   09:58   0:00 lightdm --session-child 15 22
+surelye      623  0.0  0.2  19136 10844 ?        Ss   09:58   0:00 /lib/systemd/systemd --user
+surelye      624  0.0  0.0 103292  3252 ?        S    09:58   0:00 (sd-pam)
+surelye      639  0.0  0.9 660556 36464 ?        S<sl 09:58   0:00 /usr/bin/pulseaudio --daemonize=no --log-target=j
+surelye      641  0.0  0.2 239880 11924 ?        SLsl 09:58   0:00 /usr/bin/gnome-keyring-daemon --foreground --comp
+surelye      647  0.0  0.1   9688  5448 ?        Ss   09:58   0:03 /usr/bin/dbus-daemon --session --address=systemd:
+surelye      649  0.0  0.7 267916 28332 ?        Ssl  09:58   0:01 xfce4-session
+surelye      714  0.0  0.0  19152   340 ?        S    09:58   0:00 /usr/bin/VBoxClient --clipboard
+surelye      715  0.0  0.1 217340  4044 ?        Sl   09:58   0:00 /usr/bin/VBoxClient --clipboard
+surelye      729  0.0  0.0  19152   344 ?        S    09:58   0:00 /usr/bin/VBoxClient --seamless
+surelye      730  0.3  0.0 217440  2412 ?        Sl   09:58   0:11 /usr/bin/VBoxClient --seamless
+surelye      737  0.0  0.0  19152   344 ?        S    09:58   0:00 /usr/bin/VBoxClient --draganddrop
+surelye      738  0.5  0.0 217956  2348 ?        Sl   09:58   0:17 /usr/bin/VBoxClient --draganddrop
+surelye      752  0.0  0.0   7908   840 ?        Ss   09:58   0:00 /usr/bin/ssh-agent x-session-manager
+surelye      757  0.0  0.0  19152   344 ?        S    09:58   0:00 /usr/bin/VBoxClient --vmsvga
+surelye      758  0.0  0.0 217544  3484 ?        Sl   09:58   0:02 /usr/bin/VBoxClient --vmsvga
+surelye      770  0.0  0.2 311188  9644 ?        Ssl  09:58   0:00 /usr/libexec/at-spi-bus-launcher
+surelye      776  0.0  0.1   9248  4808 ?        S    09:58   0:00 /usr/bin/dbus-daemon --config-file=/usr/share/def
+surelye      785  0.0  0.3 164508 12076 ?        Sl   09:58   0:01 /usr/libexec/at-spi2-registryd --use-gnome-sessio
+surelye      796  0.0  0.1  81256  5556 ?        SLs  09:58   0:00 /usr/bin/gpg-agent --supervised
+surelye      798  1.2  2.7 946716 111176 ?       Sl   09:58   0:42 xfwm4 --display :0.0 --sm-client-id 2a7e5ee0c-0cb
+surelye      801  0.0  0.2 237504  9652 ?        Ssl  09:58   0:00 /usr/libexec/gvfsd
+surelye      806  0.0  0.2 380364  8612 ?        Sl   09:58   0:00 /usr/libexec/gvfsd-fuse /run/user/1000/gvfs -f
+surelye      825  0.0  0.7 231228 29868 ?        Sl   09:58   0:01 xfsettingsd --display :0.0 --sm-client-id 2b2f371
+root         828  0.0  0.2 233764  8480 ?        Ssl  09:58   0:00 /usr/libexec/upowerd
+surelye      836  0.0  1.1 478700 47932 ?        Sl   09:58   0:02 xfce4-panel --display :0.0 --sm-client-id 237f466
+surelye      840  0.0  0.6 341244 26620 ?        Sl   09:58   0:00 Thunar --sm-client-id 219dca2cd-9e0b-4956-aa09-fd
+surelye      845  0.1  1.5 413924 60616 ?        Sl   09:58   0:03 xfdesktop --display :0.0 --sm-client-id 2c8ae4bd9
+surelye      846  0.0  1.2 408924 51020 ?        Sl   09:58   0:01 /usr/lib/x86_64-linux-gnu/xfce4/panel/wrapper-2.0
+surelye      851  1.5  1.0 287040 40052 ?        Sl   09:58   0:53 /usr/lib/x86_64-linux-gnu/xfce4/panel/wrapper-2.0
+surelye      852  0.0  0.7 340044 29100 ?        Sl   09:58   0:00 /usr/lib/x86_64-linux-gnu/xfce4/panel/wrapper-2.0
+surelye      853  0.7  0.7 358568 28568 ?        Sl   09:58   0:26 /usr/lib/x86_64-linux-gnu/xfce4/panel/wrapper-2.0
+surelye      854  0.3  1.0 658448 43484 ?        Sl   09:58   0:12 /usr/lib/x86_64-linux-gnu/xfce4/panel/wrapper-2.0
+surelye      855  0.0  1.1 325860 44948 ?        Sl   09:58   0:00 /usr/lib/x86_64-linux-gnu/xfce4/panel/wrapper-2.0
+surelye      856  0.0  1.1 334252 45564 ?        Sl   09:58   0:00 /usr/lib/x86_64-linux-gnu/xfce4/panel/wrapper-2.0
+surelye      857  0.0  1.0 334080 42956 ?        Sl   09:58   0:00 /usr/lib/x86_64-linux-gnu/xfce4/panel/wrapper-2.0
+surelye      893  0.0  0.4 187184 19900 ?        Sl   09:58   0:00 xfce4-power-manager --restart --sm-client-id 2ba6
+surelye      907  0.0  0.4 260972 19820 ?        Ssl  09:58   0:00 /usr/lib/x86_64-linux-gnu/xfce4/notifyd/xfce4-not
+surelye      920  0.0  0.1 234036  7044 ?        Sl   09:59   0:00 /usr/libexec/geoclue-2.0/demos/agent
+surelye      926  0.0  0.2 850144 10700 ?        Sl   09:59   0:00 xiccd
+surelye      942  0.0  0.1 156312  4256 ?        Ssl  09:59   0:00 /usr/libexec/dconf-service
+surelye      943  0.0  0.4 186168 17888 ?        Sl   09:59   0:00 /usr/lib/policykit-1-gnome/polkit-gnome-authentic
+surelye      949  0.0  1.2 493860 51424 ?        Sl   09:59   0:00 nm-applet
+surelye      965  0.0  0.3 498844 13472 ?        Ssl  09:59   0:00 /usr/libexec/gvfs-udisks2-volume-monitor
+colord       968  0.0  0.3 242348 15192 ?        Ssl  09:59   0:00 /usr/libexec/colord
+surelye      973  0.0  1.3 374840 53292 ?        Sl   09:59   0:01 /usr/bin/python3 /usr/bin/blueman-applet
+root         980  0.0  0.3 394812 15056 ?        Ssl  09:59   0:00 /usr/libexec/udisks2/udisksd
+surelye      982  0.0  0.6 265668 25816 ?        Sl   09:59   0:00 light-locker
+surelye     1007  0.0  0.1  14648  4096 ?        Ssl  09:59   0:01 xcape -e Super_L Control_L Escape
+surelye     1082  0.0  0.2 234292  8848 ?        Ssl  09:59   0:00 /usr/libexec/gvfs-gphoto2-volume-monitor
+surelye     1092  0.0  0.2 233516  8240 ?        Ssl  09:59   0:00 /usr/libexec/gvfs-goa-volume-monitor
+surelye     1099  0.1  2.6 442644 105996 ?       Sl   09:59   0:05 /usr/bin/qterminal
+surelye     1100  0.0  0.2 312392  9992 ?        Ssl  09:59   0:00 /usr/libexec/gvfs-afc-volume-monitor
+surelye     1113  0.0  0.2 233340  8264 ?        Ssl  09:59   0:00 /usr/libexec/gvfs-mtp-volume-monitor
+surelye     1159  0.0  0.2 311616  9956 ?        Sl   09:59   0:00 /usr/libexec/gvfsd-trash --spawner :1.15 /org/gtk
+surelye     1170  0.0  0.2 159792  8404 ?        Ssl  09:59   0:00 /usr/libexec/gvfsd-metadata
+surelye     1233  0.7  2.7 444908 109252 ?       Sl   09:59   0:25 /usr/bin/qterminal
+surelye     1242  0.1  0.1  13796  7740 pts/0    Ss+  09:59   0:06 /usr/bin/zsh
+surelye     1245  0.2  0.1  13804  7860 pts/1    Ss   09:59   0:07 /usr/bin/zsh
+surelye     1270  0.0  0.1  48484  7112 ?        Ss   09:59   0:00 /usr/libexec/bluetooth/obexd
+root        3818  0.0  0.0      0     0 ?        I    10:04   0:01 [kworker/u4:1-events_unbound]
+surelye     7570  0.0  0.3 390072 13924 ?        Ssl  10:11   0:00 /usr/libexec/xdg-desktop-portal
+surelye     7574  0.0  0.2 534056 11224 ?        Ssl  10:11   0:00 /usr/libexec/xdg-document-portal
+surelye     7577  0.0  0.2 236688  9812 ?        Ssl  10:11   0:00 /usr/libexec/xdg-permission-store
+root        7583  0.0  0.0   2480   964 ?        Ss   10:11   0:00 fusermount3 -o rw,nosuid,nodev,fsname=portal,auto
+surelye     7586  0.0  0.5 336048 21720 ?        Ssl  10:11   0:00 /usr/libexec/xdg-desktop-portal-gtk
+root        7932  0.0  0.0      0     0 ?        I    10:12   0:00 [kworker/1:2-events]
+root        8459  0.5  0.0      0     0 ?        I    10:12   0:14 [kworker/1:3-events]
+root       16345  0.0  0.0      0     0 ?        I    10:29   0:01 [kworker/u4:0-flush-8:0]
+root       21100  0.0  0.0      0     0 ?        I    10:39   0:00 [kworker/u4:3-flush-8:0]
+root       21607  0.1  0.0      0     0 ?        I    10:40   0:01 [kworker/0:1-events_freezable_power_]
+root       26641  0.1  0.0      0     0 ?        I    10:50   0:00 [kworker/0:2-events_freezable_power_]
+root       29024  0.1  0.0      0     0 ?        I    10:55   0:00 [kworker/u4:2-events_unbound]
+root       29186  0.1  0.0      0     0 ?        I    10:56   0:00 [kworker/0:0-events]
+surelye    29472  0.0  0.0   5496  1008 pts/1    S+   10:56   0:00 script 5_processes.txt
+surelye    29473  0.7  0.1  10204  6452 pts/2    Ss   10:56   0:00 zsh -i
+surelye    29497  0.0  0.0   2576   916 pts/2    S    10:56   0:00 sh
+surelye    29603  100  0.1  11212  4816 pts/2    R+   10:56   0:00 ps aux
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+- Получите список всех запущенных процессов вашего пользователя
+$ ps -u $(whoami)
+    PID TTY          TIME CMD
+    623 ?        00:00:00 systemd
+    624 ?        00:00:00 (sd-pam)
+    639 ?        00:00:00 pulseaudio
+    641 ?        00:00:00 gnome-keyring-d
+    647 ?        00:00:03 dbus-daemon
+    649 ?        00:00:01 xfce4-session
+    714 ?        00:00:00 VBoxClient
+    715 ?        00:00:00 VBoxClient
+    729 ?        00:00:00 VBoxClient
+    730 ?        00:00:11 VBoxClient
+    737 ?        00:00:00 VBoxClient
+    738 ?        00:00:17 VBoxClient
+    752 ?        00:00:00 ssh-agent
+    757 ?        00:00:00 VBoxClient
+    758 ?        00:00:02 VBoxClient
+    770 ?        00:00:00 at-spi-bus-laun
+    776 ?        00:00:00 dbus-daemon
+    785 ?        00:00:01 at-spi2-registr
+    796 ?        00:00:00 gpg-agent
+    798 ?        00:00:43 xfwm4
+    801 ?        00:00:00 gvfsd
+    806 ?        00:00:00 gvfsd-fuse
+    825 ?        00:00:01 xfsettingsd
+    836 ?        00:00:02 xfce4-panel
+    840 ?        00:00:00 Thunar
+    845 ?        00:00:03 xfdesktop
+    846 ?        00:00:01 panel-1-whisker
+    851 ?        00:00:53 panel-13-cpugra
+    852 ?        00:00:00 panel-14-systra
+    853 ?        00:00:26 panel-15-genmon
+    854 ?        00:00:12 panel-16-pulsea
+    855 ?        00:00:00 panel-17-notifi
+    856 ?        00:00:00 panel-18-power-
+    857 ?        00:00:00 panel-22-action
+    893 ?        00:00:00 xfce4-power-man
+    907 ?        00:00:00 xfce4-notifyd
+    920 ?        00:00:00 agent
+    926 ?        00:00:00 xiccd
+    942 ?        00:00:00 dconf-service
+    943 ?        00:00:00 polkit-gnome-au
+    949 ?        00:00:00 nm-applet
+    965 ?        00:00:00 gvfs-udisks2-vo
+    973 ?        00:00:01 blueman-applet
+    982 ?        00:00:00 light-locker
+   1007 ?        00:00:01 xcape
+   1082 ?        00:00:00 gvfs-gphoto2-vo
+   1092 ?        00:00:00 gvfs-goa-volume
+   1099 ?        00:00:05 qterminal
+   1100 ?        00:00:00 gvfs-afc-volume
+   1113 ?        00:00:00 gvfs-mtp-volume
+   1159 ?        00:00:00 gvfsd-trash
+   1170 ?        00:00:00 gvfsd-metadata
+   1233 ?        00:00:25 qterminal
+   1242 pts/0    00:00:06 zsh
+   1245 pts/1    00:00:07 zsh
+   1270 ?        00:00:00 obexd
+   7570 ?        00:00:00 xdg-desktop-por
+   7574 ?        00:00:00 xdg-document-po
+   7577 ?        00:00:00 xdg-permission-
+   7586 ?        00:00:00 xdg-desktop-por
+  29472 pts/1    00:00:00 script
+  29473 pts/2    00:00:00 zsh
+  29497 pts/2    00:00:00 sh
+  29677 pts/2    00:00:00 ps
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+- Получите динамический список процессов, которыми в данный момент управляет ядро Linux (CPU, использование памяти и т. д.), в режиме реального времени
+$ top
+top - 10:57:05 up 58 min,  1 user,  load average: 0.24, 0.49, 0.48
+Tasks: 157 total,   1 running, 156 sleeping,   0 stopped,   0 zombie
+%Cpu(s): 50.0 us,  0.0 sy,  0.0 ni, 50.0 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+MiB Mem :   3910.7 total,   2495.6 free,    897.7 used,    745.7 buff/cache
+MiB Swap:    975.0 total,    975.0 free,      0.0 used.   3013.0 avail Mem
+
+PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND                                      
+  476 root      20   0  398876 139024  61604 S  25.0   3.5   2:44.31 Xorg
+    1 root      20   0  167720  12244   9112 S   0.0   0.3   0:01.70 systemd
+    2 root      20   0       0      0      0 S   0.0   0.0   0:00.03 kthreadd
+    3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_gp
+    4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_par_gp
+    5 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 slub_flushwq
+    6 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 netns
+   10 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 mm_percpu_wq
+   11 root      20   0       0      0      0 I   0.0   0.0   0:00.00 rcu_tasks_kthread
+   12 root      20   0       0      0      0 I   0.0   0.0   0:00.00 rcu_tasks_rude_kthread
+   13 root      20   0       0      0      0 I   0.0   0.0   0:00.00 rcu_tasks_trace_kthread
+   14 root      20   0       0      0      0 S   0.0   0.0   0:01.44 ksoftirqd/0
+   15 root      20   0       0      0      0 I   0.0   0.0   0:08.63 rcu_preempt
+   16 root      rt   0       0      0      0 S   0.0   0.0   0:00.07 migration/0
+   18 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/0
+   19 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/1
+   20 root      rt   0       0      0      0 S   0.0   0.0   0:01.77 migration/1
+   21 root      20   0       0      0      0 S   0.0   0.0   0:07.00 ksoftirqd/1
+   23 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/1:0H-events_highpri
+   26 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kdevtmpfs
+   27 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 inet_frag_wq
+   28 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kauditd
+   29 root      20   0       0      0      0 S   0.0   0.0   0:00.01 khungtaskd
+   31 root      20   0       0      0      0 S   0.0   0.0   0:00.00 oom_reaper
+   32 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 writeback
+   33 root      20   0       0      0      0 S   0.0   0.0   0:01.10 kcompactd0
+   34 root      25   5       0      0      0 S   0.0   0.0   0:00.00 ksmd
+   36 root      39  19       0      0      0 S   0.0   0.0   0:02.39 khugepaged
+   37 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kintegrityd
+   38 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kblockd
+   39 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 blkcg_punt_bio
+   40 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 tpm_dev_wq
+   41 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 edac-poller
+   42 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 devfreq_wq
+   43 root       0 -20       0      0      0 I   0.0   0.0   0:01.95 kworker/1:1H-kblockd
+   44 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kswapd0
+   51 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kthrotld
+   53 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 acpi_thermal_pm
+   54 root      20   0       0      0      0 S   0.0   0.0   0:00.00 xenbus_probe
+   55 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 mld
+   56 root       0 -20       0      0      0 I   0.0   0.0   0:00.94 kworker/0:1H-kblockd
+   57 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 ipv6_addrconf
+   62 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kstrp
+   67 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 zswap-shrink
+   68 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/u5:0
+  145 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 ata_sff
+  147 root      20   0       0      0      0 S   0.0   0.0   0:00.05 scsi_eh_0
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+- Отсортируйте предыдущий список по использованию памяти
+$ top -o %MEM
+top - 10:57:13 up 58 min,  1 user,  load average: 0.22, 0.48, 0.48
+Tasks: 157 total,   2 running, 155 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.0 us,  0.0 sy,  0.0 ni, 100.0 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+MiB Mem :   3910.7 total,   2495.1 free,    898.1 used,    745.8 buff/cache
+MiB Swap:    975.0 total,    975.0 free,      0.0 used.   3012.6 avail Mem
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+    476 root      20   0  398876 139024  61604 R  13.6   3.5   2:44.76 Xorg
+    798 surelye   20   0  946716 111176  79104 S   4.5   2.8   0:43.25 xfwm4
+   1233 surelye   20   0  444908 109252  88844 S   0.0   2.7   0:26.18 qterminal
+   1099 surelye   20   0  442644 105996  86248 S   0.0   2.6   0:05.34 qterminal
+    845 surelye   20   0  413924  60616  35596 S   0.0   1.5   0:03.98 xfdesktop
+    973 surelye   20   0  374840  53292  31588 S   0.0   1.3   0:01.48 blueman-applet
+    949 surelye   20   0  493860  51424  37624 S   0.0   1.3   0:00.48 nm-applet
+    846 surelye   20   0  408924  51020  34128 S   0.0   1.3   0:01.33 panel-1-whisker
+    836 surelye   20   0  478700  47932  35532 S   0.0   1.2   0:02.32 xfce4-panel
+    856 surelye   20   0  334252  45564  32608 S   0.0   1.1   0:00.49 panel-18-power-
+    855 surelye   20   0  325860  44948  32064 S   0.0   1.1   0:00.47 panel-17-notifi
+    854 surelye   20   0  658448  43484  34252 S   0.0   1.1   0:12.58 panel-16-pulsea
+    857 surelye   20   0  334080  42956  32152 S   0.0   1.1   0:00.51 panel-22-action
+    851 surelye   20   0  287040  40052  22060 S   0.0   1.0   0:53.51 panel-13-cpugra
+    639 surelye    9 -11  660556  36464  24424 S   0.0   0.9   0:00.65 pulseaudio
+    825 surelye   20   0  231228  29868  19748 S   0.0   0.7   0:01.42 xfsettingsd
+    852 surelye   20   0  340044  29100  17828 S   0.0   0.7   0:00.33 panel-14-systra
+    853 surelye   20   0  358568  28568  20692 S   0.0   0.7   0:26.21 panel-15-genmon
+    649 surelye   20   0  267916  28332  17876 S   0.0   0.7   0:01.44 xfce4-session
+    840 surelye   20   0  341244  26620  17284 S   0.0   0.7   0:00.36 Thunar
+    982 surelye   20   0  265668  25816  16808 S   0.0   0.6   0:00.35 light-locker
+    412 root      20   0  258548  21764  16844 S   0.0   0.5   0:00.71 NetworkManager
+   7586 surelye   20   0  336048  21720  16884 S   0.0   0.5   0:00.35 xdg-desktop-por
+    893 surelye   20   0  187184  19900  15564 S   0.0   0.5   0:00.24 xfce4-power-man
+    907 surelye   20   0  260972  19820  15620 S   0.0   0.5   0:00.31 xfce4-notifyd
+    943 surelye   20   0  186168  17888  13896 S   0.0   0.4   0:00.21 polkit-gnome-au
+    272 root      20   0   49572  16260  14992 S   0.0   0.4   0:00.53 systemd-journal
+    968 colord    20   0  242348  15192   9596 S   0.0   0.4   0:00.35 colord
+    980 root      20   0  394812  15056  10500 S   0.0   0.4   0:00.27 udisksd
+   7570 surelye   20   0  390072  13924  10336 S   0.0   0.3   0:00.14 xdg-desktop-por
+    965 surelye   20   0  498844  13472   9688 S   0.0   0.3   0:00.13 gvfs-udisks2-vo
+      1 root      20   0  167720  12244   9112 S   0.0   0.3   0:01.70 systemd
+    422 root      20   0  317308  12168  10312 S   0.0   0.3   0:00.17 ModemManager
+    785 surelye   20   0  164508  12076   7152 S   0.0   0.3   0:01.15 at-spi2-registr
+    394 polkitd   20   0  309992  12072   7516 S   0.0   0.3   0:00.62 polkitd
+    641 surelye   20   0  239880  11924   8824 S   0.0   0.3   0:00.07 gnome-keyring-d
+   7574 surelye   20   0  534056  11224   6420 S   0.0   0.3   0:00.08 xdg-document-po
+    623 surelye   20   0   19136  10844   8824 S   0.0   0.3   0:00.25 systemd
+    926 surelye   20   0  850144  10700   7320 S   0.0   0.3   0:00.14 xiccd
+   1100 surelye   20   0  312392   9992   6880 S   0.0   0.2   0:00.79 gvfs-afc-volume
+   1159 surelye   20   0  311616   9956   7084 S   0.0   0.2   0:00.06 gvfsd-trash
+   7577 surelye   20   0  236688   9812   5172 S   0.0   0.2   0:00.01 xdg-permission-
+    801 surelye   20   0  237504   9652   6684 S   0.0   0.2   0:00.06 gvfsd
+    770 surelye   20   0  311188   9644   6820 S   0.0   0.2   0:00.03 at-spi-bus-laun
+   1082 surelye   20   0  234292   8848   6088 S   0.0   0.2   0:00.02 gvfs-gphoto2-vo
+    806 surelye   20   0  380364   8612   5884 S   0.0   0.2   0:00.00 gvfsd-fuse
+    828 root      20   0  233764   8480   5824 S   0.0   0.2   0:00.07 upowerd
