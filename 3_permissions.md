@@ -1,4 +1,5 @@
 - Получите все файлы в текущем каталоге
+```bash
 $ ls -a
 .		   .dmrc	  .local	  .ssh				       .viminfo
 ..		   Documents	  .mozilla	  .sudo_as_admin_successful	       .wget-hsts
@@ -10,28 +11,41 @@ $ ls -a
 .config		   .java	  Pictures	  .vboxclient-seamless.pid
 .dbus		   .john	  .profile	  .vboxclient-vmsvga-session-tty7.pid
 Desktop		   .lesshst	  Public	  Videos
+```
 
 - Создайте новую папку «permission»
+```bash
 $ mkdir permission
+```
 
 - Перейдите в этот каталог
+```bash
 $ cd permission
+```
 
 - Создайте новый файл «secretFile» с содержимым «This is very secret info»
+```bash
 $ cat > secretFile <<EOF
 > This is very secret info
 > EOF
+```
 
 - Измените разрешение этого файла, чтобы никто не мог его прочитать
+```bash
 $ chmod 200 secretFile
+```
 
 - Получите список файлов в текущем каталоге с информацией о разрешениях
+```bash
 $ ls -al
 total 12
 drwxr-xr-x  2 surelye surelye 4096 Feb 20 10:29 .
 drwx------ 23 surelye surelye 4096 Feb 20 10:29 ..
 --w-------  1 surelye surelye   25 Feb 20 10:29 secretFile
+```
 
 - Попробуйте прочитать информацию из файла
+```bash
 $ cat secretFile
 cat: secretFile: Permission denied
+```
